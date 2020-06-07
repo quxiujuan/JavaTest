@@ -60,6 +60,9 @@ public class Salary extends Employee {
         }
         executor.shutdown();
     }
+    public void  test(){
+
+    }
 
 
 }
