@@ -2,10 +2,7 @@ package com.exercise.abstractTest;
 
 import javax.management.Query;
 import java.util.Iterator;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class MainTest {
     public static void main(String[] args) {
@@ -32,6 +29,8 @@ public class MainTest {
                 }
             });
         }
-        executor.shutdown();
+//        ExecutorService executorService=Executors.newCachedThreadPool();
+//        ExecutorService executorService=Executors.newFixedThreadPool();
+//        ExecutorService executorService=Executors.newFixedThreadPool()
     }
 }

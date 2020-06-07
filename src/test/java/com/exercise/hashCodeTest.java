@@ -1,17 +1,15 @@
 package com.exercise;
 
 import org.junit.Test;
-import sun.util.resources.cldr.zh.CalendarData_zh_Hans_SG;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-public class hashMapTest {
+public class hashCodeTest {
     @Test
     public void hashMapTest(){
         Integer a = null;
@@ -61,5 +59,11 @@ public class hashMapTest {
             });
         }
         executor.shutdown();
+    }
+    @Test
+    public void testHashCode(){
+        String s="we3";
+       int hash= s.hashCode();
+        System.out.println("-----"+hash);
     }
 }

@@ -2,6 +2,8 @@ package com.exercise;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.*;
 
 public class ThreadTest {
@@ -19,6 +21,7 @@ public class ThreadTest {
     public void testThreadPoolExecutor() {
 
         BlockingQueue queue = new LinkedBlockingQueue();
+        BlockingQueue queue2 = new ArrayBlockingQueue(3);
         ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 6, 1, TimeUnit.DAYS, queue);
 
         for (int i = 0; i < 20; i++) {
@@ -35,5 +38,20 @@ public class ThreadTest {
             });
         }
         executor.shutdown();
+    }
+    @Test
+    public void testRemoveAll(){
+
+        List<String> b=new ArrayList<>();
+        b.add("1");
+        b.add("2");
+        b.add("5");
+        List<String> a=new ArrayList<>();
+        a.add("1");
+        a.add("2");
+        a.add("3");
+        b.removeAll(a);
+        System.out.println(a.toString());
+
     }
 }
